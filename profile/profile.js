@@ -126,7 +126,7 @@ document.querySelector(".success").addEventListener("click", function (e) {
   e.preventDefault();
   document.querySelector(".modal12").style.display = "block";
   document.querySelector(".yes").onclick = function () {
-    window.location.href = "../index/index.html";
+    window.location.href = "../index.html";
   };
   document.querySelector(".no").onclick = function () {
     document.querySelector(".modal12").style.display = "none";
