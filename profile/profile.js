@@ -24,11 +24,11 @@ function getApi() {
 }
 
 document.querySelector(".btn-add").addEventListener("click", function () {
-  document.querySelector(".modal").style.display = "block";
+  document.querySelector(".modal-add").style.display = "block";
   var close = document.querySelectorAll(".close");
   for (var i = 0; i < close.length; i++) {
     close[i].addEventListener("click", function () {
-      document.querySelector(".modal").style.display = "none";
+      document.querySelector(".modal-add").style.display = "none";
     });
   }
   document.querySelector(".save").addEventListener("click", function () {
@@ -60,11 +60,11 @@ document.querySelector(".btn-add").addEventListener("click", function () {
 });
 
 function edit(id) {
-  document.querySelector(".modal").style.display = "block";
+  document.querySelector(".modal-add").style.display = "block";
   var close = document.querySelectorAll(".close");
   for (var i = 0; i < close.length; i++) {
     close[i].addEventListener("click", function () {
-      document.querySelector(".modal").style.display = "none";
+      document.querySelector(".modal-add").style.display = "none";
     });
   }
   var apiId = "https://66a7bcd853c13f22a3d0e5b4.mockapi.io/products/" + id;
@@ -73,7 +73,6 @@ function edit(id) {
       return res.json();
     })
     .then(function (data) {
-      console.log(data);
       document.querySelector("#useName").value = data.name;
       document.querySelector("#Price").value = data.price;
       document.querySelector("#RatingStar").value = data.ratingStar;
